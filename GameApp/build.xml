@@ -76,6 +76,10 @@
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
               	
+              	<presetdef name="javac">
+              	  <javac includeantruntime="false" />
+              	</presetdef>
+              	
               	    <target name="compile">
               	        <mkdir dir="${classes.dir}"/>
               	        <javac srcdir="${src.dir}" destdir="${classes.dir}"/>
